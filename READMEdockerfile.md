@@ -1,0 +1,1 @@
+A Dockerfile that builds image from everything I have in my folder
