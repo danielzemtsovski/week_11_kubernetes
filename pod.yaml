@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stimlite
+  labels: 
+    app: stimlite
+spec:
+  containers:
+  - name: stimlite
+    image: daielzemtsovski/week11_test:v1
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080

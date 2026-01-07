@@ -1,0 +1,75 @@
+ git clone https://github.com/yosefanaliza/streamlit_minikube_app.git
+
+minikube start
+
+minikube status
+
+git checkout -b Dockerfile
+
+docker build -t daielzemtsovski/week11_test:v1 .
+
+docker images
+
+docker run -d -p 8080:8501 daielzemtsovski/week11_test:v1
+
+docker login
+
+docker push daielzemtsovski/week11_test:v1
+
+git add .
+
+git commit -m "add Dockerfile"
+
+git checkout main
+
+git merge Dockerfile
+
+git push
+
+git checkout -b podyaml
+
+git add .
+
+git commit -m "add pod yaml"
+
+git checkout main
+
+git merge podyaml
+
+git push
+
+git checkout -b serviceyaml
+
+git add .
+
+git commit -m "add service yaml"
+
+git checkout main
+
+git merge serviceyaml
+
+git push
+
+kubectl apply -f pod.yaml 
+
+kubectl apply -f service.yaml
+
+kubectl get pods
+
+kubectl get services
+
+kubectl logs stimlite
+
+minikube service stimlite-service --url
+
+git checkout -b screenshot
+
+git add .
+
+git commit -m "add screenshot"
+
+git checkout main
+
+git merge screenshot
+
+git push
